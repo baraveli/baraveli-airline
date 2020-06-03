@@ -2,7 +2,7 @@
 
 ![screenshot](screenshot.PNG)
 
-Baraveli Airlines is an attempt to rebuild [Fis.com.mv](http://fis.com.mv). Currently Working progress.
+Baraveli Airlines is an attempt to rebuild [Fis.com.mv](http://fis.com.mv). Currently Work in progress.
 
 ### Built With
 
