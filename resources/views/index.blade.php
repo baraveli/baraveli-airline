@@ -4,6 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Baraveli Airlines">
+    <meta property="og:description" content="Gets latest information on inbound and outbound flights for Ibrahim Nasir International Airport, Maldives." />
+    <meta property="og:url" content="https://airlines.baraveli.xyz" />
+    <meta property="og:site_name" content="airlines.baraveli.xyz" />
+    <meta property="og:image" content="/images/og.jpg">
+    <meta name=" twitter:title" content="Baraveli Airlines" />
+    <meta name="twitter:description" content="Gets latest information on inbound and outbound flights for Ibrahim Nasir International Airport, Maldives." />
+    <meta name="twitter:site" content="https://airlines.baraveli.xyz" />
+    <meta name="twitter:image" content="/images/og.jpg">
 
     <title>Baraveli Airline</title>
 
