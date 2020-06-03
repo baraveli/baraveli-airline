@@ -13,25 +13,35 @@
 
     <style>
         .loader {
-          border-top-color: #4FD1C5;
-          -webkit-animation: spinner 1.5s linear infinite;
-          animation: spinner 1.5s linear infinite;
+            border-top-color: #4FD1C5;
+            -webkit-animation: spinner 1.5s linear infinite;
+            animation: spinner 1.5s linear infinite;
         }
-        
+
         @-webkit-keyframes spinner {
-          0% { -webkit-transform: rotate(0deg); }
-          100% { -webkit-transform: rotate(360deg); }
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
         }
-        
+
         @keyframes spinner {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
-        </style>
+    </style>
 
 </head>
 
-<body class="antialiased font-sans bg-gray-200">
+<body class="antialiased font-sans bg-gray-200" onload="startTime()">
     <div class="container mx-auto px-4 sm:px-8">
         <div class="text-center mt-10 flex justify-center">
             <div class="flex justify-center items-center">
@@ -54,6 +64,19 @@
             </div>
 
         </div>
+
+        <div class="flex justify-center mb-5">
+            <div class="mt-2 p-5 w-40 bg-white rounded shadow">
+                <div class="flex justify-between items-center">
+                    <img class="h-10" src="https://image.flaticon.com/icons/svg/875/875216.svg">
+                  <h3 id="clock" class="bg-transparent text-xl text-center"></h3>
+                  
+                </div>
+              </div>
+        </div>
+       
+
+       
 
         <div class="max-w-xl px-4 py-4 mx-auto">
             <div class="sm:grid sm:h-32 sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
@@ -90,9 +113,11 @@
 
 
 
-
+        <footer class="p-2 text-center font-normal text-gray-600">
+            <p>Baraveli Airlines © 2020. Made with ❤️ in Maldives.</p>
+        </footer>
     </div>
-
+<script src="/js/script.js"></script>
 </body>
 
 </html>

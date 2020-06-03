@@ -3,8 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Modules\Fis;
-use Illuminate\Support\Facades\Cache;
+use App\FisService;
 
 class DepatureTable extends Component
 {
@@ -12,11 +11,8 @@ class DepatureTable extends Component
 
     public function render()
     {
-        $fis = new Fis;
 
-        $depaturescache = Cache::remember('flights.depatures', 30, function () use ($fis) {
-            return $fis->getFlights('depatures');
-        });
+        $depaturescache = (new FisService)->depature();
 
         $depatures = collect($depaturescache)->filter(function ($item) use ($depaturescache) {
 

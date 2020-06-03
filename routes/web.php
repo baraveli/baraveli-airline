@@ -1,8 +1,7 @@
 <?php
 
+use App\FisService;
 use Illuminate\Support\Facades\Route;
-use App\Modules\Fis;
-use Illuminate\Support\Facades\Cache;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,21 +14,9 @@ use Illuminate\Support\Facades\Cache;
 |
 */
 
-Route::get('/', function () {
-    $fis = new Fis;
-
-    $arrivals = Cache::remember('flights.arrivals', 30, function () use ($fis) {
-        return $fis->getFlights('arrivals');
-    });
-
-    $depatures = Cache::remember('flights.depatures', 30, function () use ($fis) {
-        return $fis->getFlights('depatures');
-    });
-
-
-
+Route::get('/', function (FisService $fisService) {
     return view('index', [
-        'arrivals' => collect($arrivals),
-        'depatures' => collect($depatures)
+        'arrivals' => collect($fisService->arrival()),
+        'depatures' => collect($fisService->depature())
     ]);
 });
